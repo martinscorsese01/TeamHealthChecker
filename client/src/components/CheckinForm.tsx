@@ -61,7 +61,7 @@ export default function CheckinForm({ onSubmit }: CheckinFormProps) {
         notes: "",
       });
       setIsSubmitting(false);
-    }, 800);
+    }, 500);
   };
 
   // Helper function to format date for display
