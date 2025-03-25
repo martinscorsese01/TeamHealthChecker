@@ -39,6 +39,9 @@ export default function CheckinList({ checkins }: CheckinListProps) {
                     </span>
                   </div>
                   <p className="text-sm text-slate-500 mt-1">{checkin.date}</p>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    Submitted {formatTime(checkin.timestamp)}
+                  </p>
                 </div>
                 <div className="text-sm text-slate-700 sm:text-right max-w-sm">
                   {checkin.notes || "No additional notes provided."}
@@ -64,5 +67,23 @@ function getFeelingStyles(feeling: string): string {
       return "feeling-bad bg-red-100 text-red-600 border-red-200";
     default:
       return "bg-gray-100 text-gray-600 border-gray-200";
+  }
+}
+
+function formatTime(date: Date): string {
+  const now = new Date();
+  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+  
+  if (diffInSeconds < 60) {
+    return `just now`;
+  } else if (diffInSeconds < 3600) {
+    const minutes = Math.floor(diffInSeconds / 60);
+    return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'} ago`;
+  } else if (diffInSeconds < 86400) {
+    const hours = Math.floor(diffInSeconds / 3600);
+    return `${hours} ${hours === 1 ? 'hour' : 'hours'} ago`;
+  } else {
+    const days = Math.floor(diffInSeconds / 86400);
+    return `${days} ${days === 1 ? 'day' : 'days'} ago`;
   }
 }
