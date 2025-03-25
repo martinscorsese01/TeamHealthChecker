@@ -1,0 +1,60 @@
+I'm building a **Team Health Checker app** for my university assignment.
+
+🧠 Tech stack:
+- Frontend: React (with Vite + TypeScript)
+- Styling: TailwindCSS and Shadcn/UI
+- Backend: Supabase (to be added later)
+- Deployment: I’ll figure that out later — for now I’m only working on the frontend
+
+🎯 What the app should do:
+I want users to be able to submit their check-in to the team board by filling out:
+- Name
+- How they're feeling (text or dropdown)
+- Date (auto-filled with today’s date, but editable)
+- Notes (optional)
+
+Submissions should appear in a list of check-ins below the form.
+
+📁 Folder Structure:
+- Inside `src/`, create a `components/` folder
+- Inside `components/`, create two files: `CheckinForm.jsx` and `CheckinList.jsx`
+
+📄 App Structure:
+- `App.tsx`:
+  - Displays a heading like “Team Health Board”
+  - Manages the list of check-ins in React state
+  - Renders `<CheckinForm />` to collect user input
+  - Renders `<CheckinList />` to display all check-ins
+
+- `CheckinForm.jsx`:
+  - Contains form inputs: name, feeling, date, notes
+  - On submit, passes the data back to the parent via `onSubmit` prop
+  - Clears the form after submission
+
+- `CheckinList.jsx`:
+  - Displays a list of check-ins passed as props
+  - Each entry should show: name, feeling, date, and notes
+
+🪜 Development Plan:
+Please help me build this app in **clear, structured stages**. After each stage, **pause** so I can:
+- Review the code
+- Test the changes
+- Make a Git commit
+- Then we’ll move to the next step
+
+🧱 Step-by-step Plan:
+1. Set up the project and install dependencies (React + Vite + TypeScript + TailwindCSS + Shadcn/UI)
+2. Create the basic folder and file structure for the frontend
+3. Implement the main layout in `App.tsx` with a placeholder for components
+4. Create the `CheckinForm` component with input fields
+5. Create the `CheckinList` component to display check-ins
+6. Connect form submission to state in `App.tsx`
+7. Add minimal styling using Shadcn/UI or Tailwind
+8. Prepare the code for future Supabase integration (but don’t connect it yet)
+
+📦 Notes:
+- Keep the UI beginner-friendly and clean
+- Use local React state for now (no backend yet)
+- I want to maintain **clear Git commit history** — so one commit per step
+
+Please begin with **Step 1** and wait for my confirmation before continuing to Step 2.
