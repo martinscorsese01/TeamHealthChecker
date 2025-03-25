@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
+import { Checkin } from "@/types/checkin";
 import CheckinForm from "@/components/CheckinForm";
 import CheckinList from "@/components/CheckinList";
-import { Checkin } from "@/types/checkin";
 
 function App() {
   const [checkins, setCheckins] = useState<Checkin[]>([]);
@@ -14,7 +14,7 @@ function App() {
     toast({
       title: "Check-in submitted successfully!",
       description: "Your team check-in has been recorded.",
-      variant: "success",
+      variant: "default",
     });
   };
 

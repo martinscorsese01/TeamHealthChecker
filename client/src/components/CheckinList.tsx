@@ -25,7 +25,7 @@ export default function CheckinList({ checkins }: CheckinListProps) {
           {checkins.map((checkin) => (
             <div 
               key={checkin.id} 
-              className="checkin-item p-4 rounded-md border border-slate-200 hover:border-slate-300 bg-white shadow-sm fade-in"
+              className="checkin-item p-4 rounded-md border border-slate-200 hover:border-slate-300 bg-white shadow-sm"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
